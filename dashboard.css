@@ -1,0 +1,111 @@
+ * {
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    .loader{
+        width: 5em;
+        height: 5em;
+        background-color: transparent;
+        border: 2px solid cyan;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation:rotate 1.2s linear infinite;
+    }
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+    body {
+        background: radial-gradient(circle, #020617, #000);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: cyan;
+    }
+
+    .slot-machine {
+        background: #020617;
+        border: 3px solid cyan;
+        border-radius: 15px;
+        padding: 30px;
+        width: 320px;
+        text-align: center;
+        box-shadow: 0 0 25px cyan;
+        display: none;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px cyan;
+    }
+
+    .reels {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .reel {
+        width: 80px;
+        height: 80px;
+        background: black;
+        border: 2px solid cyan;
+        border-radius: 10px;
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0 0 10px cyan;
+        transition: transform 0.3s ease;
+    }
+
+    .spinning {
+        animation: spin 0.3s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotateY(-0deg); }
+        100% { transform: rotateY(-360deg); }
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 25px;
+        border: 2px solid cyan;
+        background: transparent;
+        color: cyan;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: cyan;
+        color: #020617;
+        box-shadow: 0 0 15px cyan;
+    }
+
+    .message {
+        margin-top: 15px;
+        font-size: 18px;
+        min-height: 24px;
+    }
+
+    .win {
+        color: lime;
+        text-shadow: 0 0 10px lime;
+    }
+
+    .lose {
+        color: red;
+    }
