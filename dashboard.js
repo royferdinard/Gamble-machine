@@ -34,7 +34,7 @@
             });
 
             checkWin();
-        }, 3000);
+        }, 1200);
     }
 
     function checkWin() {
